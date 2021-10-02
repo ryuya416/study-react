@@ -18,6 +18,7 @@ export const CommentComponent = () => {
         <li>{data.name}</li>
         <li>{data.email}</li>
       </ul>
+      <h2>元の記事</h2>
     </div>
   );
 };
