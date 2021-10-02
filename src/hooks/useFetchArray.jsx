@@ -28,3 +28,8 @@ export const useUsers = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   return useFetchArray(`${API_URL}/users`, fetcher);
 };
+
+export const useCommentsByPostsId = (id) => {
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
+  return useFetchArray(id ? `${API_URL}/comments?postId=${id}` : null, fetcher);
+};
